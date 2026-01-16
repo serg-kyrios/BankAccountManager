@@ -1,4 +1,6 @@
 package bank;
 
-public class TransactionType {
+public enum TransactionType {
+    DEPOSIT,
+    WITHDRAW
 }
