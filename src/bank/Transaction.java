@@ -5,9 +5,9 @@
 import java.time.LocalDateTime;
 
     public class Transaction {
-        public enum TransactionType {
-            DEPOSIT,
-            WITHDRAW}
+//        public enum TransactionType {
+//            DEPOSIT,
+//            WITHDRAW}
         private final double amount;
         private final TransactionType type;
         private final LocalDateTime dateTime;
@@ -29,6 +29,10 @@ import java.time.LocalDateTime;
         public LocalDateTime getDateTime() {
             return dateTime;
         }
+        public double getBalance() {
+            return balance;
+        }
+
 
         @Override
         public String toString() {
@@ -36,4 +40,4 @@ import java.time.LocalDateTime;
         }
     }
 
-}
+

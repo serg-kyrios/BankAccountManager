@@ -1,10 +1,10 @@
 package bank;
+
 import java.util.List;
 import java.util.ArrayList;
 
-
 public class BankAccount {
-//банківський рахунок
+
     String ownerName;
     double balance;
     List<Transaction> transactions;
@@ -28,10 +28,7 @@ public class BankAccount {
         System.out.println("Баланс: " + balance);
     }
 
-
-
     public void withdraw(double amount) {
-//зняття коштів
         if (amount <= 0) {
             System.out.println("Помилка: сума має бути більшою за 0");
             return;
@@ -49,20 +46,20 @@ public class BankAccount {
         System.out.println("Баланс: " + balance);
     }
 
+    public void printTransactions() {
+        if (transactions.isEmpty()) {
+            System.out.println("Транзакцій поки немає");
+            return;
+        }
 
-
-
-}
-
-public void printTransactions() {
-    if (transactions.isEmpty()) {
-        System.out.println("Транзакцій поки немає");
-        return;
+        System.out.println("Історія транзакцій:");
+        for (Transaction t : transactions) {
+            System.out.println(t);
+        }
     }
 
-    System.out.println("Історія транзакцій:");
-    for (Transaction t : transactions) {
-        System.out.println(t);
+    public double getBalance() {
+        return balance;
     }
 }
 
