@@ -27,10 +27,33 @@ public class BankAccount {
         System.out.println("Поповнення на: " + amount);
         System.out.println("Баланс: " + balance);
     }
+
+
+
+    public void withdraw(double amount) {
+
+        if (amount <= 0) {
+            System.out.println("Помилка: сума має бути більшою за 0");
+            return;
+        }
+
+        if (amount > balance) {
+            System.out.println("Помилка: недостатньо коштів на рахунку");
+            return;
+        }
+
+        balance -= amount;
+        transactions.add(new Transaction(amount, TransactionType.WITHDRAW));
+
+        System.out.println("Зняття на: " + amount);
+        System.out.println("Баланс: " + balance);
+    }
+
+
+
+
+}
 }
 
-
-    double withdraw(double amount){};
-
-   List printTransactions(){};
-}
+//List printTransactions(){};
+//}
