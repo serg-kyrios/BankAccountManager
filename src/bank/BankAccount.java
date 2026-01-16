@@ -17,7 +17,9 @@ public class BankAccount {
 
     public void deposit(double amount) {
         if (amount <= 0) {
-            System.out.println("Помилка: сума має бути більшою за 0");
+           // System.out.println("Помилка: сума має бути більшою за 0");
+            System.out.println("Рахунок поповнено на: " + amount + " грн!");
+
             return;
         }
 
