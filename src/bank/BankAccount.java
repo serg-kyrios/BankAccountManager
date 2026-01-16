@@ -2,12 +2,33 @@ package bank;
 import java.util.List;
 import java.util.ArrayList;
 
+
 public class BankAccount {
-          String ownerName;
-          int  balance;
+//банківський рахунок
+    String ownerName;
+    double balance;
     List<Transaction> transactions;
 
-    double deposit(double amount){};
+    public BankAccount(String ownerName) {
+        this.ownerName = ownerName;
+        this.balance = 0;
+        this.transactions = new ArrayList<>();
+    }
+
+    public void deposit(double amount) {
+        if (amount <= 0) {
+            System.out.println("Помилка: сума має бути більшою за 0");
+            return;
+        }
+
+        balance += amount;
+        transactions.add(new Transaction(amount, TransactionType.DEPOSIT));
+
+        System.out.println("Поповнення на: " + amount);
+        System.out.println("Баланс: " + balance);
+    }
+}
+
 
     double withdraw(double amount){};
 
