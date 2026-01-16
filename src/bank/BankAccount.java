@@ -53,7 +53,20 @@ public class BankAccount {
 
 
 }
+
+public void printTransactions() {
+    if (transactions.isEmpty()) {
+        System.out.println("Транзакцій поки немає");
+        return;
+    }
+
+    System.out.println("Історія транзакцій:");
+    for (Transaction t : transactions) {
+        System.out.println(t);
+    }
 }
+
+
 
 //List printTransactions(){};
 //}
