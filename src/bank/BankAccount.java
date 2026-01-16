@@ -31,7 +31,7 @@ public class BankAccount {
 
 
     public void withdraw(double amount) {
-
+//зняття коштів
         if (amount <= 0) {
             System.out.println("Помилка: сума має бути більшою за 0");
             return;
